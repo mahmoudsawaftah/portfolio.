@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -32,13 +32,23 @@ const Contact = () => {
           }`}
           style={{ transitionDelay: "300ms" }}
         >
-          <div className="flex items-center justify-center gap-3 mb-6">
+          <div className="flex items-center justify-center gap-3 mb-4">
             <Mail size={20} className="text-primary" />
             <a
               href="mailto:mahmodrsawafath@gmail.com"
               className="text-foreground hover:text-primary transition-colors"
             >
               mahmodrsawafath@gmail.com
+            </a>
+          </div>
+
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <Phone size={20} className="text-primary" />
+            <a
+              href="tel:+962775931952"
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              00962775931952
             </a>
           </div>
 
