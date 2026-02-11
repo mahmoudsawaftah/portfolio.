@@ -1,12 +1,19 @@
 import { ArrowDown, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTypingAnimation } from "@/hooks/useTypingAnimation";
 
 const Hero = () => {
+  const { displayedText } = useTypingAnimation({
+    text: "Mahmoud",
+    speed: 80,
+    delay: 300,
+  });
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background gradient orbs */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-cyan-400/8 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <div className="animate-fade-up" style={{ animationDelay: "0.1s" }}>
@@ -19,7 +26,9 @@ const Hero = () => {
           className="animate-fade-up text-4xl sm:text-5xl md:text-7xl font-bold mb-6 tracking-tight"
           style={{ animationDelay: "0.2s" }}
         >
-          <span className="gradient-text">Mahmoud</span>{" "}
+          <span className="gradient-text">{displayedText}</span>
+          <span className="inline-block w-1 h-[1.2em] bg-primary ml-1 animate-pulse" />
+          {" "}
           <span className="text-foreground">Sawaftah</span>
         </h1>
 
