@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, Phone } from "lucide-react";
+import { Mail, Github, Linkedin, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -81,6 +81,21 @@ const Contact = () => {
                 aria-label="GitHub"
               >
                 <Github size={18} />
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="icon"
+              className="rounded-full border-border/60 hover:border-primary/50 hover:glow-sm"
+            >
+              <a
+                href="https://wa.me/962775931952"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle size={18} />
               </a>
             </Button>
           </div>
